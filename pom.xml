@@ -6,7 +6,7 @@
     <groupId>com.micro.services</groupId>
     <artifactId>micro-admin-system</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>micro-admin-system</name>
     <description>micro-admin project for Spring Cloud</description>
@@ -20,6 +20,7 @@
 
     <modules>
         <module>micro-consul</module>
+        <module>micro-oauth</module>
     </modules>
     <properties>
         <fastjson-version>1.4.0</fastjson-version>
