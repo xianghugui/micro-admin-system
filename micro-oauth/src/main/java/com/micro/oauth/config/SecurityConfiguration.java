@@ -19,13 +19,6 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder());
-//    }
-
-
     @Bean
     @Override
     protected UserDetailsService userDetailsService(){
@@ -35,19 +28,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //        password 方案二：用 BCrypt 对密码编码
 //        String finalPassword = bCryptPasswordEncoder.encode("123456");
         // password 方案三：支持多种编码，通过密码的前缀区分编码方式
-        String finalPassword = "{bcrypt}"+bCryptPasswordEncoder.encode("123456");
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+        String finalPassword = "{bcrypt}" +bCryptPasswordEncoder.encode("123456");
+        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();//存储在内存中，便于测试，生产中存在数据库
         manager.createUser(User.withUsername("user_1").password(finalPassword).authorities("USER").build());
         manager.createUser(User.withUsername("user_2").password(finalPassword).authorities("USER").build());
         return manager;
     }
-
-    /**
-     * springboot2.0 删除了原来的 plainTextPasswordEncoder
-     * https://docs.spring.io/spring-security/site/docs/5.0.4.RELEASE/reference/htmlsingle/#10.3.2 DelegatingPasswordEncoder
-     *
-     */
-
 
     // password 方案一：明文存储，用于测试，不能用于生产
 //    @Bean
@@ -88,4 +74,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/oauth/**").permitAll();
         // @formatter:on
     }
+
 }
