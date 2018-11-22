@@ -21,6 +21,7 @@
     <modules>
         <module>micro-consul</module>
         <module>micro-oauth</module>
+        <module>micro-system</module>
     </modules>
     <properties>
         <fastjson-version>1.4.0</fastjson-version>
