@@ -1,6 +1,5 @@
 package com.micro.oauth.config;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -18,7 +17,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 
-@SuppressWarnings("ALL")
+
 @Configuration
 public class OAuth2ServerConfig {
 
@@ -36,7 +35,7 @@ public class OAuth2ServerConfig {
         @Override
         public void configure(HttpSecurity http) throws Exception {
             http
-                .authorizeRequests()
+                    .authorizeRequests()
                     .antMatchers("/order/**").authenticated();//配置order访问控制，必须认证过后才可以访问
 
         }
