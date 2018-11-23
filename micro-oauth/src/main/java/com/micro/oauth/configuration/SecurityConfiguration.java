@@ -1,4 +1,4 @@
-package com.micro.oauth.config;
+package com.micro.oauth.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

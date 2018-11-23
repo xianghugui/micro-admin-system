@@ -1,4 +1,4 @@
-package com.micro.oauth.config;
+package com.micro.oauth.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,7 @@ import org.springframework.security.oauth2.provider.token.store.redis.RedisToken
 
 
 @Configuration
-public class OAuth2ServerConfig {
+public class OAuth2ServerConfiguration {
 
     private static final String DEMO_RESOURCE_ID = "order";
 
