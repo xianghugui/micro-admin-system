@@ -1,4 +1,4 @@
-package com.micro.oauth.web;
+package com.micro.oauth.controller;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
