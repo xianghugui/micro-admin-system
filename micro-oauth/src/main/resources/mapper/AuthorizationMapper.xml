@@ -5,8 +5,9 @@
 
 <mapper namespace="com.micro.oauth.mapper">
 
-    <select id="Authorization" resultType="com.alibaba.fastjson.JSONObject">
-
+    <select id="Authorization" parameterType="com.alibaba.fastjson.JSONObject" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT  se.authorization_code FROM s_user su, s_user_role sur,s_element_role_authority sera, s_element se
+        WHERE su.role_group_code = sur.user_role_association_code AND sur.role_id = sera.role_id AND sera.element_id =se.id AND su.username = 'admin'
     </select>
 
 </mapper>
