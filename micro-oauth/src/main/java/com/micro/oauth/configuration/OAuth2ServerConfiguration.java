@@ -36,7 +36,7 @@ public class OAuth2ServerConfiguration {
         public void configure(HttpSecurity http) throws Exception {
             http
                     .authorizeRequests()
-                    .antMatchers("/order/**").authenticated();//配置order访问控制，必须认证过后才可以访问
+                    .antMatchers("/order/**").authenticated();//配置order访问控制，必须认证过后才可以访问（哪个节点下的资源需要权限才可以访问）
 
         }
     }
