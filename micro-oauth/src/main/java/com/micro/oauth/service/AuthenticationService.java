@@ -1,15 +1,15 @@
 package com.micro.oauth.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.micro.oauth.mapper.AuthorizationMapper;
+import com.micro.oauth.mapper.AuthenticationMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @Service
-public class AuthorizationService {
+public class AuthenticationService {
     @Autowired
-    private AuthorizationMapper authorizationMapper;
+    private AuthenticationMapper authenticationMapper;
 
     JSONObject authorization(JSONObject jsonObject){
 

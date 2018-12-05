@@ -21,7 +21,7 @@ import org.springframework.security.oauth2.provider.token.store.redis.RedisToken
 @Configuration
 public class OAuth2ServerConfiguration {
 
-    private static final String DEMO_RESOURCE_ID = "向虎贵";
+    private static final String DEMO_RESOURCE_ID = "xxx";
 
     @Configuration
     @EnableResourceServer
