@@ -19,7 +19,6 @@
     </parent>
 
     <modules>
-        <module>micro-consul</module>
         <module>micro-oauth</module>
         <module>micro-system</module>
     </modules>
